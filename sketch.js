@@ -119,6 +119,8 @@ function selectSizes()
 		sideSize = (middleDist/(screenSize/2))*maxSize + 1;
 	else if($("#sizeType").val() == "middleBig")
 		sideSize = (1-(middleDist/(screenSize/2)))*maxSize + 1;
+	else if($("#sizeType").val() == "loop")
+		sideSize = sizeLoop(maxSize, maxSize / 100);
 }
 
 var switchVal = 0;
@@ -227,4 +229,23 @@ function selectColors()
 		stroke(r/2, g/2, b/2);
 	strokeWeight(sw);
 	fill(r, g, b);
+}
+
+var c = 1;
+var atMax = false;
+function sizeLoop(max, rate)
+{
+	if($("#sizeType").val() == "loop" && (mouseIsPressed || auto))
+	{
+		if(c < max && !atMax)
+			c += rate;
+		else if(c >= max)
+			atMax = true;
+					
+		if(c > 0 && atMax)
+			c -= rate;
+		else if(c <= 0)
+			atMax = false;
+	}
+	return c;
 }
