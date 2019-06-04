@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+
+	<title>CoolColoring</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		canvas {
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="things">
+		<button id="clear" style="float: right; margin-right: 200px">CLEAR</button>
+		<button id="auto" style="float: right;">Start AutoDraw</button>
+		<button id="save" style="float: right;">Save As Image</button>
+		<br>
+
+		<select id="colors">
+			<option value="rainbow">Rainbow</option>
+			<option value="random">Random</option>
+			<option value="red">Red/Blue</option>
+			<option value="blue">Blue/Green</option>
+			<option value="green">Red/Green</option>
+			<option value="grey">Greyscale</option>
+			<option value="sunset">Sunset</option>
+			<option value="max">Max Miller is My Dad</option>
+		</select>
+
+		<select id="sizeType">
+			<option value="regular">Regular</option>
+			<option value="middleSmall">Middle Small</option>
+			<option value="middleBig">Middle Big</option>
+		</select>
+		<br>
+		Stroke Weight: <input type="number" id="stroke" min="0" max="15" value="2">
+		<br>
+		Stroke Color Black? <input type="checkbox" id="check">
+		<br>
+		Maximum Size: <input type="number" id="size" min="1" max="500" value="75">
+		<br>
+		Background Color: <input type="color" id="color">
+		<button id="bgButton">Select</button>
+
+	</div>
+
+</body>
+</html>

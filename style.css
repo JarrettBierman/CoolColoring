@@ -1,0 +1,18 @@
+#things{
+    float: right;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: deeppink;
+    color: white;
+    border: none;
+    padding: 12px 12px;
+    margin: 5px;
+}
+
+input, select{
+    font-size: 30px;
+}
