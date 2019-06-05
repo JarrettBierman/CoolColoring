@@ -217,12 +217,20 @@ function selectColors()
 		g = y/screenSize*255;
 		b = 0;
 	}
-	else if(value == "max")
+	else if(value == "lime")
 	{
-		r = y/screenSize*255;
-		g = 255;
-		b = 0;
+		r = 0
+		g = 255
+		b = y/screenSize * 255;
 	}
+	else if(value == "blood")
+	{
+		r = 255
+		g = 0
+		b = y/screenSize * 255;
+	}
+	
+
 	if($("#check").prop('checked') == true)
 		stroke(0);
 	else
@@ -241,7 +249,7 @@ function sizeLoop(max, rate)
 			c += rate;
 		else if(c >= max)
 			atMax = true;
-					
+
 		if(c > 0 && atMax)
 			c -= rate;
 		else if(c <= 0)
