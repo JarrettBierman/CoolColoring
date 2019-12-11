@@ -1,4 +1,4 @@
-var screenSize = 700;
+var screenSize = window.innerHeight;
 var rr = 255;
 var rg = 0;
 var rb = 0;
@@ -205,6 +205,13 @@ function selectColors()
 		b = 0;
 	
 	}
+	else if(value == "yellow")
+	{
+		r = x/screenSize*255;
+		g = x/screenSize*255;
+		b = 255-(x/screenSize*255);
+	
+	}
 	else if(value == "grey")
 	{
 		r = y/screenSize*255;
@@ -213,15 +220,15 @@ function selectColors()
 	}
 	else if(value == "sunset")
 	{
-		r = 255;
-		g = y/screenSize*255;
+		r = 255-(x-screenSize*255);
+		g = x/screenSize*255;
 		b = 0;
 	}
 	else if(value == "lime")
 	{
-		r = 0
-		g = 255
-		b = y/screenSize * 255;
+		r = 50;
+		g = 255-(x-screenSize*255);
+		b = x/screenSize * 255;
 	}
 	else if(value == "blood")
 	{
